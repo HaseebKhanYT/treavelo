@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
-
+import NavBar from "../components/Navbar";
 
 function Home() {
- 
-
   return (
-   
     <div>
-Home page
+      <NavBar />
     </div>
   );
 }
