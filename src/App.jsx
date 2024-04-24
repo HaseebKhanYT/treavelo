@@ -1,12 +1,15 @@
-// import { useState } from "react";
 import "./App.css";
+// import DisplayPlaces from "./components/DisplayPlaces";
+import Home from "./pages/Home";
 
 function App() {
-  // const [count, setCount] = useState(0);
+
 
   return (
     <>
       <h1>Treavelo</h1>
+      <Home/>
+      {/* <DisplayPlaces/> */}
     </>
   );
 }
