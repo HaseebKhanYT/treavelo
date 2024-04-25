@@ -17,6 +17,19 @@
   flex: 0 0 50%;
 }
 
+.hero-image{
+  position: relative;
+}
+
 .image-container {
   flex: 0 1 auto;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  color: white;
 }
