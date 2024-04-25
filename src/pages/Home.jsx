@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
+import Hero from "../components/Hero";
 
 function Home() {
- 
   return (
-   
     <>
-    This is a homepage
+      <Hero />
     </>
   );
 }

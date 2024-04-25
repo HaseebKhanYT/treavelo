@@ -1,0 +1,22 @@
+.header-text {
+  font-size: 4rem;
+  width: 100%;
+}
+
+.paragraph {
+  width: 25rem;
+}
+
+.hero-image {
+  max-width: 100%;
+  min-height: 100%;
+
+}
+
+.hero-text-container {
+  flex: 0 0 50%;
+}
+
+.image-container {
+  flex: 0 1 auto;
+}
