@@ -26,7 +26,7 @@ function Hero() {
           <figure className="hero-image">
 
           <img
-            src="https://picsum.photos/200/200"
+            src="https://picsum.photos/500/500"
             width={500}
             height={500}
             alt="Hero Image"
