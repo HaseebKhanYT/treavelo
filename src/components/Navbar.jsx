@@ -1,16 +1,35 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Button from "./ui/Button";
+import logo from "../assets/logo.svg"
+import "./Navbar.css";
 
-function NavBar() {
-    return (
-        <nav>
-            <ul>
-                <li><a href="/Home">Home</a></li>
-                <li><a href="/About">About</a></li>
-                <li><a href="/FAQs">FAQs</a></li>
-                <li><a href="/TryTreavelo">Try Treavelo</a></li>
-            </ul>
-        </nav>
-    );
+
+function Navbar() {
+  return (
+  <>
+  <div className="center flex-column my-1">
+
+    <img className="my-1" src={logo} alt="treavelo logo" />
+    <nav>
+      <ul className="merriweather-sans night">
+        <li className="nav-buttons">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="nav-buttons">
+          <a href="#about">About</a>
+        </li>
+        <li className="nav-buttons">
+          <a href="#faq">FAQs</a>
+        </li>
+        <li>
+            <Button />
+        </li>
+      </ul>
+    </nav>
+  </div>
+  </>
+  );
 }
 
-export default NavBar;
+export default Navbar;
