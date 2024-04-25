@@ -259,6 +259,14 @@
 
 /* Color Pallette */
 
+.grey {
+  color: #374957;
+}
+
+.grey-bg {
+  background-color: #374957;
+}
+
 .pistachio{
   color: #85C270;
 }
