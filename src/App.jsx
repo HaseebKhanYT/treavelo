@@ -1,15 +1,18 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
-// import DisplayPlaces from "./components/DisplayPlaces";
+
 import Home from "./pages/Home";
+import Treavelo from "./pages/Treavelo";
+import Navbar from "./components/Navbar";
 
 function App() {
-
-
   return (
     <>
-      <h1>Treavelo</h1>
-      <Home/>
-      {/* <DisplayPlaces/> */}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/treavelo" element={<Treavelo />} />
+      </Routes>
     </>
   );
 }
