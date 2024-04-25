@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+ul {
+  list-style: none;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-buttons {
+  border-radius: 25px;
+  padding: 1rem 1.5rem ;
+
+}
+
+.nav-buttons.active {
+  background-color: #85C270;
+}
+
+.nav-buttons:hover {
+  background-color: #85C270;
+}
+
+.nav-buttons > a {
+  text-decoration: none;
+  color: #0D0A0B;
+  text-wrap: nowrap;
+}
+
+a:visited {
+  color: #0D0A0B;
+}
