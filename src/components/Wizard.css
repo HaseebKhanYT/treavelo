@@ -1,0 +1,14 @@
+.button {
+  background-color: #62AB49;
+  color: #0D0A0B;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  border-color: #62AB49;
+  font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  border: 0;
+  cursor: pointer;
+}

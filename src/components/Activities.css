@@ -1,0 +1,68 @@
+.card {
+  height: 290px;
+  width: 220px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s;
+  background-size: cover;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.card1 {
+  background-image: url("../assets/sight.jpg");
+}
+.card2 {
+  background-image: url("../assets/nightlife.jpg");
+}
+.card3 {
+  background-image: url("../assets/shopping.jpg");
+}
+.card4 {
+  background-image: url("../assets/restaurant.jpg");
+}
+.card:hover .card_content,
+.card:hover .card_bottom_shadow {
+  bottom: 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card_content {
+  z-index: 2;
+  color: #fff;
+  font-family: Arial;
+  padding: 0px 20px 25px;
+  position: absolute;
+  @media (min-width: 768px) {
+    bottom: -150px;
+  }
+  bottom: 0px;
+  left: 0;
+  transition: all 0.25s;
+}
+
+.card_title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card_bottom_shadow {
+  height: 150px;
+  width: 100%;
+  position: absolute;
+  @media (min-width: 768px) {
+    bottom: -150px;
+  }
+  bottom: 0;
+  left: 0;
+  transition: all 0.1s;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+}
