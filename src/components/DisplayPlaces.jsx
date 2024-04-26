@@ -31,28 +31,28 @@ const fetchGooglePlaces = async (query, apiKey) => {
   }
 };
 
-function DisplayPlaces() {
+function DisplayPlaces({wizardData}) {
   const [poiData, setPoiData] = useState(null);
-  const [placeNames, setPlaceNames] = useState([]);
-  const [placeImageUrl, setPlaceImageUrl] = useState("");
   const apiKey = API_KEY;
   const apiSecret = API_SECRET;
-  const accessToken = "krBHIGhWWwqFofy9EH52AHp0wLK3";
-  const googleAPIKey = "AIzaSyBY6Lm20sRvoCnUEt4AwdxJGiToLoW26MI";
+  const accessToken = "7Lvq1HE0cXS4ddNTgc0wgqZFFHgA";
+  const googleAPIKey = GOOGLE_API_KEY;
   const baseUrl = "https://test.api.amadeus.com";
-  const latitude = 37.77653909418952; // SF latitude
-  const longitude = -122.42646798583974; // SF Longitude
+  const latitude = wizardData.latitude; // SF latitude
+  const longitude = wizardData.longitude; // SF Longitude
+  const radius = wizardData.radius;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        
         const response = await axios.get(
           `${baseUrl}/v1/reference-data/locations/pois?`,
           {
             params: {
               latitude: latitude,
               longitude: longitude,
+              radius: 2,
+              'page[limit]': 5,
             },
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -62,7 +62,7 @@ function DisplayPlaces() {
         setPoiData(response.data);
         const names = response.data.data.map((poi) => poi.name);
 
-        setPlaceNames(names);
+        // setPlaceNames(names);
 
         const query = names[0];
         const data = await fetchGooglePlaces(query, googleAPIKey);
@@ -84,7 +84,6 @@ function DisplayPlaces() {
           <ul>
             {poiData.data.map((poi, index) => (
               <li key={index}>
-                {/* <img src={{placeImageUrl}} alt="image" /> */}
                 <strong>{poi.name}</strong>
                 <ul>
                   {poi.tags.map((tag, tagIndex) => (

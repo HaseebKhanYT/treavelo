@@ -1,10 +1,28 @@
 import DisplayPlaces from "../components/DisplayPlaces";
+import { useState, useEffect } from "react";
+import Wizard from "../components/Wizard";
 
-export default function Treavelo () {
+export default function Treavelo() {
+  const [displayPLaces, setDisplayPLaces] = useState(false);
+  const [wizardData, setWizardData] = useState({
+    latitude: 0,
+    longitude: 0,
+    radius: 1,
+    categories: "",
+  });
+
   return (
     <>
-    <h1>This is Treavelo Pages</h1>
-    <DisplayPlaces/>
+      {displayPLaces ? (
+        <DisplayPlaces wizardData={wizardData} setWizardData={setWizardData} />
+      ) : (
+        <Wizard
+          displayPlaces={displayPLaces}
+          setDisplayPlaces={setDisplayPLaces}
+          wizardData={wizardData}
+          setWizardData={setWizardData}
+        />
+      )}
     </>
-  )
+  );
 }
