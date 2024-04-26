@@ -1,3 +1,9 @@
 body {
   background-color: #F4EBE8;
 }
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Philosopher", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
