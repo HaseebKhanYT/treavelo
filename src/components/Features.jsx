@@ -12,8 +12,8 @@ function Features() {
       <div className="main-card grey-bg d-flex flex-column rounded gutter">
         <h2 className="my-1">City Gem Navigator</h2>
         <div className="features-container">
-          <div className="main_feaure">
-            <p className="merriweather-sans">
+          <div className="main_feaure d-flex justify-center flex-column">
+            <p className="merriweather-sans mb-3">
               Seamlessly explore the city's highlights with our curated list of
               top attractions. Powered by the AVUXI TopPlace algorithm, discover
               the most popular landmarks, parks, historical sites, nightlife
@@ -34,7 +34,7 @@ function Features() {
         </div>
       </div>
       <div className="features-wrapper">
-        <div className="feature1">
+        <div className="feature1 justify-between">
           <img src={feature1} alt="mountain" className="feature-image" />
           <h3 className="philosopher-bold d-flex justify-center-lg-start">
             Authentic recommendations
@@ -45,7 +45,7 @@ function Features() {
             who know their destinations best.
           </p>
         </div>
-        <div className="feature2">
+        <div className="feature2 justify-between">
           <img src={feature2} alt="mountain" className="feature-image" />
           <h3 className="philosopher-bold d-flex justify-center-lg-start">
             Top Attractions Discovery
@@ -57,7 +57,7 @@ function Features() {
             landmarks, nightlife spots, restaurants, or shopping destinations.
           </p>
         </div>
-        <div className="feature3">
+        <div className="feature3 justify-between">
           <img src={feature3} alt="mountain" className="feature-image" />
           <h3 className="philosopher-bold d-flex justify-center-lg-start">
             Category-Based Recommendations
@@ -70,7 +70,7 @@ function Features() {
             experience.
           </p>
         </div>
-        <div className="feature4">
+        <div className="feature4 justify-between">
           <img src={feature4} alt="mountain" className="feature-image" />
           <h3 className="philosopher-bold d-flex justify-center-lg-start">
             Location Discovery

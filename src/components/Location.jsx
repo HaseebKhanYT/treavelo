@@ -153,7 +153,7 @@ function Location({ wizardData, setWizardData, step, setStep }) {
         <div className="d-flex justify-center flex-column">
           <div className="input-container my-1">
             <div className="dropdown">
-              <div className="dropdown-header" onClick={toggleDropdown}>
+              <div className="dropdown-header merriweather-sans" onClick={toggleDropdown}>
                 {selectedItem
                   ? items.find((item) => item.id == selectedItem).label
                   : "Select your city"}

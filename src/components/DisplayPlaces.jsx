@@ -1,46 +1,46 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import "./DisplayPlaces.css";
 const API_KEY = process.env.API_KEY;
 const API_SECRET = process.env.API_SECRET;
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
-const fetchGooglePlaces = async (query, apiKey) => {
-  try {
-    const url = "https://places.googleapis.com/v1/places:searchText";
-    const headers = {
-      "Content-Type": "application/json",
-      "X-Goog-Api-Key": apiKey,
-      "X-Goog-FieldMask": "places.id,places.photos,places.formattedAddress",
-    };
+// const fetchGooglePlaces = async (query, apiKey) => {
+//   try {
+//     const url = "https://places.googleapis.com/v1/places:searchText";
+//     const headers = {
+//       "Content-Type": "application/json",
+//       "X-Goog-Api-Key": apiKey,
+//       "X-Goog-FieldMask": "places.id,places.photos,places.formattedAddress",
+//     };
 
-    const response = await axios.post(
-      url,
-      {
-        textQuery: query,
-      },
-      {
-        headers: headers,
-      }
-    );
+//     const response = await axios.post(
+//       url,
+//       {
+//         textQuery: query,
+//       },
+//       {
+//         headers: headers,
+//       }
+//     );
 
-    return response.data;
-  } catch (error) {
-    console.error("Error fetching places from Google Places API:", error);
-    throw error;
-  }
-};
+//     return response.data;
+//   } catch (error) {
+//     console.error("Error fetching places from Google Places API:", error);
+//     throw error;
+//   }
+// };
 
-function DisplayPlaces({wizardData}) {
+function DisplayPlaces({ wizardData }) {
   const [poiData, setPoiData] = useState(null);
   const apiKey = API_KEY;
   const apiSecret = API_SECRET;
-  const accessToken = "UZoqGsABTJ5OCnig32cU5p5bPLaB";
+  const accessToken = "cwe1SfH4zCLzGJG1iye1Pq2ocJaY";
   const googleAPIKey = GOOGLE_API_KEY;
   const baseUrl = "https://test.api.amadeus.com";
   const latitude = wizardData.latitude; // SF latitude
   const longitude = wizardData.longitude; // SF Longitude
-  const radius = wizardData.radius;
+  const categories = wizardData.categories;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -52,7 +52,7 @@ function DisplayPlaces({wizardData}) {
               latitude: latitude,
               longitude: longitude,
               radius: 2,
-              'page[limit]': 5,
+              "page[limit]": 5,
             },
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -65,7 +65,7 @@ function DisplayPlaces({wizardData}) {
         // setPlaceNames(names);
 
         const query = names[0];
-        const data = await fetchGooglePlaces(query, googleAPIKey);
+        // const data = await fetchGooglePlaces(query, googleAPIKey);
         // setPlaceImageUrl(data.places[0].photos[0]);
       } catch (error) {
         console.error("There was a problem with your fetch operation:", error);
@@ -76,27 +76,38 @@ function DisplayPlaces({wizardData}) {
   }, []);
 
   return (
-    <div>
-      <h2>Points of Interest</h2>
-      {poiData ? (
-        <div>
-          <h3>Tags</h3>
-          <ul>
+    <div className="d-flex justify-center flex-column">
+      <h2 className="d-flex justify-center">
+        We Recommend you to visit these places
+      </h2>
+      <div className="d-flex flex-wrap justify-center">
+        {poiData ? (
+          <div className="d-flex flex-wrap my-2 justify-center">
             {poiData.data.map((poi, index) => (
-              <li key={index}>
-                <strong>{poi.name}</strong>
-                <ul>
-                  {poi.tags.map((tag, tagIndex) => (
-                    <li key={tagIndex}>{tag}</li>
+              <div
+                className="mx-1 d-flex justify-between flex-column display-card box-shadow rounded py-1 px-2 my-1"
+                key={index}
+              >
+                <h3 className="d-flex justify-center place-name">{poi.name}</h3>
+                <div className="d-flex tag-container justify-center flex-row">
+                  {poi.tags.slice(0, 5).map((tag, tagIndex) => (
+                    <div
+                      className="tag d-flex pistachio-bg justify-center merriweather-sans"
+                      key={tagIndex}
+                    >
+                      {tag}
+                    </div>
                   ))}
-                </ul>
-              </li>
+                </div>
+              </div>
             ))}
-          </ul>
-        </div>
-      ) : (
-        <p>Loading...</p>
-      )}
+          </div>
+        ) : (
+          <div id="loading-bar-spinner" className="spinner">
+            <div className="spinner-icon"></div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

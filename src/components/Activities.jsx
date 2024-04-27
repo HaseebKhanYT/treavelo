@@ -43,7 +43,7 @@ function Activities({ wizardData, setWizardData, step, setStep, setDisplayPlaces
         <div
         className="d-flex justify-center"
           onClick={() => {
-            setWizardData({ ...wizardData, categories: "RESTAURANT" });
+            setWizardData({ ...wizardData, categories: "SHOPPING" });
             setStep((currStep) => currStep + 1);
             setDisplayPlaces(true);
           }}
@@ -58,7 +58,7 @@ function Activities({ wizardData, setWizardData, step, setStep, setDisplayPlaces
         <div
         className="d-flex justify-center"
           onClick={() => {
-            setWizardData({ ...wizardData, categories: "SHOPPING" });
+            setWizardData({ ...wizardData, categories: "RESTAURANT" });
             setStep((currStep) => currStep + 1);
             setDisplayPlaces(true);
           }}

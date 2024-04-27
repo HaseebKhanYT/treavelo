@@ -10,7 +10,7 @@ function Hero() {
           <h1 className="philosopher-bold d-flex justify-center justify-lg-start header-text">
             Hi, we are <br /> Treavelo!
           </h1>
-          <div className="paragraph-container d-flex justify-center justify-lg-start">
+          <div className="paragraph-container mb-2 d-flex justify-center justify-lg-start">
             <p className="paragraph text-center text-lg-left merriweather-sans">
               Your go-to travel guide for seamless travel and experiences. We
               cater to all explorers, from seasoned adventurers to curious

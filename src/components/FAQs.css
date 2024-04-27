@@ -16,6 +16,10 @@
   border-bottom: 1px solid #374957;
 }
 
+.faqs {
+  font-size: 1.5rem;
+}
+
 .accordion button {
   position: relative;
   display: block;
@@ -80,7 +84,7 @@
 }
 
 .accordion button[aria-expanded='true'] {
-  color: #374957;
+  color: #62AB49;
 }
 .accordion button[aria-expanded='true'] .icon::after {
   width: 0;
