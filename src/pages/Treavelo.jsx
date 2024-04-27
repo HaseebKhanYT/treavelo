@@ -1,6 +1,7 @@
 import DisplayPlaces from "../components/DisplayPlaces";
 import { useState, useEffect } from "react";
 import Wizard from "../components/Wizard";
+// import Footer from "../components/Footer";
 
 export default function Treavelo() {
   const [displayPLaces, setDisplayPLaces] = useState(false);
@@ -23,6 +24,7 @@ export default function Treavelo() {
           setWizardData={setWizardData}
         />
       )}
+      {/* <Footer/> */}
     </>
   );
 }
