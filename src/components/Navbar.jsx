@@ -17,7 +17,7 @@ function Navbar() {
           <Link to="/">Home</Link>
         </li>
         <li className="nav-buttons">
-          <a href="#about">About</a>
+          <a href="#features">Features</a>
         </li>
         <li className="nav-buttons">
           <a href="#faq">FAQs</a>

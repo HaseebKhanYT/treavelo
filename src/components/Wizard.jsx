@@ -2,17 +2,13 @@ import { useEffect, useState } from "react";
 import "./Wizard.css";
 import Activities from "./Activities";
 import Location from "./Location";
-import Distance from "./Distance";
-import DisplayPlaces from "./DisplayPlaces";
 
 export default function Wizard({ displayPlaces, setDisplayPlaces, wizardData, setWizardData }) {
   const [step, setStep] = useState(0);
-  
 
   const wizardTitles = [
     "Where are you?",
-    "What are you looking for?",
-    "Are you going to drive or walk to places?",
+    "What are you looking for?"
   ];
 
   useEffect(() => {
@@ -35,22 +31,21 @@ export default function Wizard({ displayPlaces, setDisplayPlaces, wizardData, se
           setWizardData={setWizardData}
           step={step}
           setStep={setStep}
+          setDisplayPlaces={setDisplayPlaces}
         />
       );
-    } else if (step == 2) {
-      return <Distance wizardData={wizardData} setWizardData={setWizardData} />;
     }
   };
 
   return (
     <>
-      <div className="d-flex flex-column wizard-container">
-        <header>
-          <h1>{wizardTitles[step]}</h1>
+      <div className="d-flex flex-column justify-center wizard-container">
+        <header className="d-flex justify-center">
+          <h1 className="d-flex">{wizardTitles[step]}</h1>
         </header>
-        <main> {DisplayForm()}</main>
-        <footer>
-          <button
+        <main className="d-flex justify-center"> {DisplayForm()}</main>
+        <footer className="d-flex justify-center">
+          <button className="button"
             disabled={step == 0}
             onClick={() => {
               setStep((currStep) => currStep - 1);
@@ -59,6 +54,7 @@ export default function Wizard({ displayPlaces, setDisplayPlaces, wizardData, se
             Prev
           </button>{" "}
           <button
+          className="button mx-2"
             onClick={() => {
               if (step == wizardTitles.length - 1) {
                 setDisplayPlaces(true);

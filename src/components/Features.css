@@ -1,0 +1,66 @@
+/* Features.css */
+
+.main-card {
+  background-color: #f8f8f8; /* Light grey background */
+  padding: 30px; /* Increased padding */
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-between; /* Align items to the ends */
+}
+
+.main_feaure {
+  flex: 1; /* Take up remaining space */
+}
+
+.features-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.feature1,
+.feature2,
+.feature3,
+.feature4 {
+  background-color: #fff; /* White background */
+  padding: 30px; /* Increased padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+  flex: 1 1 350px; /* Increased width */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text */
+  transition: box-shadow 0.3s ease; /* Smooth transition for box shadow */
+}
+
+.feature1:hover,
+.feature2:hover,
+.feature3:hover,
+.feature4:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Box shadow on hover */
+}
+
+.feature-image {
+  width: 100px; /* Adjust image size */
+  height: 100px; /* Adjust image size */
+  border-radius: 50%; /* Circular border */
+  border: 3px solid #fff; /* White border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+  margin-bottom: 20px; /* Add margin to bottom */
+}
+
+.main-feature-img {
+  width: 500px; /* Adjust image width */
+  height: 300px; /* Adjust image height */
+}

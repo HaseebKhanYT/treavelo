@@ -10,13 +10,13 @@ function Hero() {
             Hi, we are <br /> Treavelo!
           </h1>
           <div className="paragraph-container d-flex justify-center justify-lg-start">
-          <p className="paragraph text-center text-lg-left merriweather-sans">
-            Your go-to travel guide for seamless travel and experiences. We
-            cater to all explorers, from seasoned adventurers to curious
-            first-timers. Our website acts like your personal travel guide,
-            offering curated recommendations for nearby places that pique your
-            interests.
-          </p>
+            <p className="paragraph text-center text-lg-left merriweather-sans">
+              Your go-to travel guide for seamless travel and experiences. We
+              cater to all explorers, from seasoned adventurers to curious
+              first-timers. Our website acts like your personal travel guide,
+              offering curated recommendations for nearby places that pique your
+              interests.
+            </p>
           </div>
           <div className="button-container d-flex justify-center justify-lg-start my-1">
             <Button />
@@ -24,7 +24,6 @@ function Hero() {
         </div>
         <aside className="d-flex image-container justify-center justify-lg-end w-100">
           <figure className="hero-image">
-
           <img
             src="https://picsum.photos/500/500"
             width={500}

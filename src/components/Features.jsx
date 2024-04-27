@@ -1,52 +1,90 @@
 import Button from "./ui/Button";
 import "./Features.css";
+
 function Features() {
   return (
-    <main className=" d-flex justify-center flex-column rounded">
-      <div className="main-card grey-bg d-flex rounded justify-center gutter">
-        <div className="main-text-container gutter">
-          <h2 className="my-1 d-flex isabelline philosopher-bold">
-            Main Feature
-          </h2>
-          <div className="paragraph-container">
+    <main id="features" className="d-flex justify-center flex-column rounded">
+      <div className="main-card grey-bg d-flex flex-column rounded gutter">
+        <h2 className="my-1">Main Feature</h2>
+        <div className="features-container">
+          <div className="main_feaure">
+            <h3>City Gem Navigator</h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
-              fugiat aperiam consequuntur cumque totam voluptatum. Ea dolorum
-              aperiam perferendis veniam fuga animi alias impedit. Incidunt
-              possimus aliquam doloribus aliquid sed!
+              Seamlessly explore the city's highlights with our curated list of
+              top attractions. Powered by the AVUXI TopPlace algorithm, discover
+              the most popular landmarks, parks, historical sites, nightlife
+              hotspots, restaurants, and shopping districts. Each attraction
+              comes with detailed information including name, category, tags,
+              and popularity score, ensuring you never miss out on the
+              must-visit spots.
             </p>
-            <div className="button-container d-flex justify-center">
+            <div className="button-container d-flex justify-center justify-lg-start my-1">
               <Button />
             </div>
           </div>
-        </div>
-        <div className="main-image-container">
-          <figure className="main-image">
-            <img
-              src="https://picsum.photos/200/200"
-              width={500}
-              height={500}
-              alt="main Image"
-              className="main-image rounded center"
-            />
-            <figcaption className="image-caption merriweather-sans">
-              Image by Lorem Picsum
-            </figcaption>
-          </figure>
+          <img
+            src="../src/assets/mountain.jpeg"
+            alt="mountain"
+            className="main-feature-img rounded center"
+          />
         </div>
       </div>
-      <div className="features-container d-flex">
-        <div className="feature grey-bg isabelline gutter rounded d-flex flex-column justify-center">
-          <h3 className="d-flex justify-center  my-1">Feature Title1</h3>
-          <p className="d-flex justify-center merriweather-sans">About feature title1</p>
+      <div className="features-wrapper">
+        <div className="feature1">
+          <img
+            src="../src/assets/mountain.jpeg"
+            alt="mountain"
+            className="feature-image"
+          />
+          <h3>Authentic recommendations</h3>
+          <p>
+            Discover authentic travel gems with local expert recommendations.
+            Gain insider insights and off-the-beaten-path suggestions from those
+            who know their destinations best.
+          </p>
         </div>
-        <div className="feature grey-bg isabelline gutter rounded d-flex flex-column justify-center">
-          <h3 className="d-flex justify-center  my-1">Feature Title2</h3>
-          <p className="d-flex justify-center merriweather-sans">About feature title2</p>
+        <div className="feature2">
+          <img
+            src="../src/assets/mountain.jpeg"
+            alt="mountain"
+            className="feature-image"
+          />
+          <h3>Top Attractions Discovery</h3>
+          <p>
+            Delve into a meticulously ranked selection of attractions,
+            showcasing each venue's name, precise location coordinates, and
+            categorized types, including sights, beaches/parks, historical
+            landmarks, nightlife spots, restaurants, or shopping destinations.
+          </p>
         </div>
-        <div className="feature grey-bg isabelline gutter rounded d-flex flex-column justify-center">
-          <h3 className="d-flex justify-center  my-1">Feature Title3</h3>
-          <p className="d-flex justify-center merriweather-sans">About feature title3</p>
+        <div className="feature3">
+          <img
+            src="../src/assets/mountain.jpeg"
+            alt="mountain"
+            className="feature-image"
+          />
+          <h3>Category-Based Recommendations</h3>
+          <p>
+            Recommendations that categorize locations based on their category
+            (e.g. sightseeing, nightlife, shopping, and restaurants) and offer
+            tailored recommendations accordingly. Explore specific types of
+            attractions based on your interests, ensuring a personalized travel
+            experience.
+          </p>
+        </div>
+        <div className="feature4">
+          <img
+            src="../src/assets/mountain.jpeg"
+            alt="mountain"
+            className="feature-image"
+          />
+          <h3>Location Discovery</h3>
+          <p>
+            Utilize the provided latitude and longitude coordinates to offer
+            users a comprehensive exploration of nearby attractions. Enable
+            users to discover hidden gems, historical landmarks, and popular
+            sites based on their current location or specified coordinates.
+          </p>
         </div>
       </div>
     </main>

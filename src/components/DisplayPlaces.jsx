@@ -35,7 +35,7 @@ function DisplayPlaces({wizardData}) {
   const [poiData, setPoiData] = useState(null);
   const apiKey = API_KEY;
   const apiSecret = API_SECRET;
-  const accessToken = "7Lvq1HE0cXS4ddNTgc0wgqZFFHgA";
+  const accessToken = "UZoqGsABTJ5OCnig32cU5p5bPLaB";
   const googleAPIKey = GOOGLE_API_KEY;
   const baseUrl = "https://test.api.amadeus.com";
   const latitude = wizardData.latitude; // SF latitude

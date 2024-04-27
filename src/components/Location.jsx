@@ -1,4 +1,17 @@
 import { useState, useEffect } from "react";
+import "./Location.css";
+
+const cities = [
+  { id: 0, label: "San Francisco, USA" },
+  { id: 1, label: "Dallas, USA" },
+  { id: 2, label: "NYC, USA" },
+  { id: 3, label: "Barcelona, Spain" },
+  { id: 4, label: "Berlin, Germany" },
+  { id: 5, label: "Berlin, Germany" },
+  { id: 6, label: "Paris, France" },
+  { id: 7, label: "London, UK" },
+  { id: 8, label: "Bangalore, India" },
+];
 
 function Location({ wizardData, setWizardData, step, setStep }) {
   const [currentCity, setCurrentCity] = useState("");
@@ -37,12 +50,16 @@ function Location({ wizardData, setWizardData, step, setStep }) {
   }
 
   function generateLocation() {
-    setCurrentLatitude(
-      (Math.random() * (37.81098 - 37.732007) + 37.732007).toFixed(6)
-    );
-    setCurrentLongitude(
-      (Math.random() * (-122.389076 - -122.483716) + -122.483716).toFixed(6)
-    );
+    console.log(currentCity);
+    if(!currentCity){
+
+      setCurrentLatitude(
+        (Math.random() * (37.81098 - 37.732007) + 37.732007).toFixed(6)
+      );
+      setCurrentLongitude(
+        (Math.random() * (-122.389076 - -122.483716) + -122.483716).toFixed(6)
+      );
+    }
   }
 
   function checkLocation() {
@@ -119,13 +136,60 @@ function Location({ wizardData, setWizardData, step, setStep }) {
     }
   }
 
+  const [isOpen, setOpen] = useState(false);
+  const [items, setItem] = useState(cities);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const toggleDropdown = () => setOpen(!isOpen);
+
+  const handleItemClick = (id) => {
+    selectedItem == id ? setSelectedItem(null) : setSelectedItem(id);
+    toggleDropdown();
+  };
+
   return (
     <div className="form my-2">
       <>
         <div className="d-flex justify-center flex-column">
-          <div className="button-container d-flex">
+          <div className="input-container my-1">
+            <div className="dropdown">
+              <div className="dropdown-header" onClick={toggleDropdown}>
+                {selectedItem
+                  ? items.find((item) => item.id == selectedItem).label
+                  : "Select your city"}
+                <i
+                  className={`fa fa-chevron-right icon ${isOpen && "open"}`}
+                ></i>
+              </div>
+              <div className={`dropdown-body ${isOpen && "open"}`}>
+                {items.map((item) => (
+                  <div
+                  key={item.id}
+                    className="dropdown-item"
+                    onClick={(e) => {
+                      handleItemClick(e.target.id);
+                      setCurrentCity(selectedItem);
+                    }}
+                    id={item.id}
+                  >
+                    <span
+                      className={`dropdown-item-dot ${
+                        item.id == selectedItem && "selected"
+                      }`}
+                    >
+                      •{" "}
+                    </span>
+                    {item.label}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="button-container d-flex flex-column merriweather-sans justify-center">
+            <p className="d-flex justify-center my-1">OR</p>
             <button
-              className="d-flex justify-center"
+              className="d-flex justify-center button"
               onClick={() => {
                 getCurrentLocation();
               }}
