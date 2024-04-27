@@ -20,6 +20,7 @@
   flex: 1; /* Take up remaining space */
 }
 
+
 .features-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -63,4 +64,5 @@
 .main-feature-img {
   width: 500px; /* Adjust image width */
   height: 300px; /* Adjust image height */
+  margin: 20px;
 }
