@@ -1,5 +1,6 @@
 import Button from "./ui/Button";
 import "./Hero.css";
+import hero from "../assets/hero.jpeg";
 
 function Hero() {
   return (
@@ -25,7 +26,7 @@ function Hero() {
         <aside className="d-flex image-container justify-center justify-lg-end w-100">
           <figure className="hero-image">
             <img
-              src="../src/assets/hero.jpeg"
+              src={hero}
               width={500}
               height={500}
               alt="Hero Image"
