@@ -2,15 +2,13 @@ import { useEffect, useState } from "react";
 import "./Wizard.css";
 import Activities from "./Activities";
 import Location from "./Location";
-import Distance from "./Distance";
 
 export default function Wizard({ displayPlaces, setDisplayPlaces, wizardData, setWizardData }) {
   const [step, setStep] = useState(0);
 
   const wizardTitles = [
     "Where are you?",
-    "What are you looking for?",
-    "Are you going to drive or walk to places?",
+    "What are you looking for?"
   ];
 
   useEffect(() => {
@@ -33,10 +31,9 @@ export default function Wizard({ displayPlaces, setDisplayPlaces, wizardData, se
           setWizardData={setWizardData}
           step={step}
           setStep={setStep}
+          setDisplayPlaces={setDisplayPlaces}
         />
       );
-    } else if (step == 2) {
-      return <Distance wizardData={wizardData} setWizardData={setWizardData} />;
     }
   };
 

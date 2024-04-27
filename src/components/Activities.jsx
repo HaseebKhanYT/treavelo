@@ -6,7 +6,7 @@ import shoppingImage from "../assets/shopping.jpg";
 
 import "./Activities.css";
 
-function Activities({ wizardData, setWizardData, step, setStep }) {
+function Activities({ wizardData, setWizardData, step, setStep, setDisplayPlaces}) {
   return (
 
       <div className="cards d-flex flex-column flex-md-row justify-md-evenly justify-center gutter w-100">
@@ -15,6 +15,7 @@ function Activities({ wizardData, setWizardData, step, setStep }) {
           onClick={() => {
             setWizardData({ ...wizardData, categories: "SIGHTS" });
             setStep((currStep) => currStep + 1);
+            setDisplayPlaces(true);
           }}
         >
           <div className="card1 card my-1">
@@ -29,6 +30,7 @@ function Activities({ wizardData, setWizardData, step, setStep }) {
           onClick={() => {
             setWizardData({ ...wizardData, categories: "NIGHTLIFE" });
             setStep((currStep) => currStep + 1);
+            setDisplayPlaces(true);
           }}
         >
           <div className="card2 card my-1">
@@ -43,6 +45,7 @@ function Activities({ wizardData, setWizardData, step, setStep }) {
           onClick={() => {
             setWizardData({ ...wizardData, categories: "RESTAURANT" });
             setStep((currStep) => currStep + 1);
+            setDisplayPlaces(true);
           }}
         >
           <div className="card3 card my-1">
@@ -57,6 +60,7 @@ function Activities({ wizardData, setWizardData, step, setStep }) {
           onClick={() => {
             setWizardData({ ...wizardData, categories: "SHOPPING" });
             setStep((currStep) => currStep + 1);
+            setDisplayPlaces(true);
           }}
         >
           <div className="card4 card my-1">
