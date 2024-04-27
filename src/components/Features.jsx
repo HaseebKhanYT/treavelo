@@ -1,5 +1,10 @@
 import Button from "./ui/Button";
 import "./Features.css";
+import mainfeature from "../assets/mainfeature.jpeg";
+import feature1 from "../assets/feature1.jpeg";
+import feature2 from "../assets/feature2.jpeg";
+import feature3 from "../assets/feature3.jpg";
+import feature4 from "../assets/feature4.jpeg";
 
 function Features() {
   return (
@@ -22,7 +27,7 @@ function Features() {
             </div>
           </div>
           <img
-            src="../src/assets/mainfeature.jpeg"
+            src={mainfeature}
             alt="mountain"
             className="main-feature-img rounded center"
           />
@@ -30,11 +35,7 @@ function Features() {
       </div>
       <div className="features-wrapper">
         <div className="feature1">
-          <img
-            src="../src/assets/feature1.jpeg"
-            alt="mountain"
-            className="feature-image"
-          />
+          <img src={feature1} alt="mountain" className="feature-image" />
           <h3 className="philosopher-bold d-flex justify-center-lg-start">
             Authentic recommendations
           </h3>
@@ -45,11 +46,7 @@ function Features() {
           </p>
         </div>
         <div className="feature2">
-          <img
-            src="../src/assets/feature2.jpeg"
-            alt="mountain"
-            className="feature-image"
-          />
+          <img src={feature2} alt="mountain" className="feature-image" />
           <h3 className="philosopher-bold d-flex justify-center-lg-start">
             Top Attractions Discovery
           </h3>
@@ -61,11 +58,7 @@ function Features() {
           </p>
         </div>
         <div className="feature3">
-          <img
-            src="../src/assets/feature3.jpg"
-            alt="mountain"
-            className="feature-image"
-          />
+          <img src={feature3} alt="mountain" className="feature-image" />
           <h3 className="philosopher-bold d-flex justify-center-lg-start">
             Category-Based Recommendations
           </h3>
@@ -78,11 +71,7 @@ function Features() {
           </p>
         </div>
         <div className="feature4">
-          <img
-            src="../src/assets/feature4.jpeg"
-            alt="mountain"
-            className="feature-image"
-          />
+          <img src={feature4} alt="mountain" className="feature-image" />
           <h3 className="philosopher-bold d-flex justify-center-lg-start">
             Location Discovery
           </h3>
