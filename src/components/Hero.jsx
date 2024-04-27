@@ -24,14 +24,13 @@ function Hero() {
         </div>
         <aside className="d-flex image-container justify-center justify-lg-end w-100">
           <figure className="hero-image">
-          <img
-            src="https://picsum.photos/500/500"
-            width={500}
-            height={500}
-            alt="Hero Image"
-            className="hero-image rounded center"
-          />
-          <figcaption className="image-caption merriweather-sans">Image by Lorem Picsum</figcaption>
+            <img
+              src="../src/assets/hero.jpeg"
+              width={500}
+              height={500}
+              alt="Hero Image"
+              className="hero-image rounded center"
+            />
           </figure>
         </aside>
       </section>

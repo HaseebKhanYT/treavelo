@@ -5,11 +5,10 @@ function Features() {
   return (
     <main id="features" className="d-flex justify-center flex-column rounded">
       <div className="main-card grey-bg d-flex flex-column rounded gutter">
-        <h2 className="my-1">Main Feature</h2>
+        <h2 className="my-1">City Gem Navigator</h2>
         <div className="features-container">
           <div className="main_feaure">
-            <h3>City Gem Navigator</h3>
-            <p>
+            <p className="merriweather-sans">
               Seamlessly explore the city's highlights with our curated list of
               top attractions. Powered by the AVUXI TopPlace algorithm, discover
               the most popular landmarks, parks, historical sites, nightlife
@@ -23,7 +22,7 @@ function Features() {
             </div>
           </div>
           <img
-            src="../src/assets/mountain.jpeg"
+            src="../src/assets/mainfeature.jpeg"
             alt="mountain"
             className="main-feature-img rounded center"
           />
@@ -32,12 +31,14 @@ function Features() {
       <div className="features-wrapper">
         <div className="feature1">
           <img
-            src="../src/assets/mountain.jpeg"
+            src="../src/assets/feature1.jpeg"
             alt="mountain"
             className="feature-image"
           />
-          <h3>Authentic recommendations</h3>
-          <p>
+          <h3 className="philosopher-bold d-flex justify-center-lg-start">
+            Authentic recommendations
+          </h3>
+          <p className="merriweather-sans">
             Discover authentic travel gems with local expert recommendations.
             Gain insider insights and off-the-beaten-path suggestions from those
             who know their destinations best.
@@ -45,12 +46,14 @@ function Features() {
         </div>
         <div className="feature2">
           <img
-            src="../src/assets/mountain.jpeg"
+            src="../src/assets/feature2.jpeg"
             alt="mountain"
             className="feature-image"
           />
-          <h3>Top Attractions Discovery</h3>
-          <p>
+          <h3 className="philosopher-bold d-flex justify-center-lg-start">
+            Top Attractions Discovery
+          </h3>
+          <p className="merriweather-sans">
             Delve into a meticulously ranked selection of attractions,
             showcasing each venue's name, precise location coordinates, and
             categorized types, including sights, beaches/parks, historical
@@ -59,12 +62,14 @@ function Features() {
         </div>
         <div className="feature3">
           <img
-            src="../src/assets/mountain.jpeg"
+            src="../src/assets/feature3.jpg"
             alt="mountain"
             className="feature-image"
           />
-          <h3>Category-Based Recommendations</h3>
-          <p>
+          <h3 className="philosopher-bold d-flex justify-center-lg-start">
+            Category-Based Recommendations
+          </h3>
+          <p className="merriweather-sans">
             Recommendations that categorize locations based on their category
             (e.g. sightseeing, nightlife, shopping, and restaurants) and offer
             tailored recommendations accordingly. Explore specific types of
@@ -74,12 +79,14 @@ function Features() {
         </div>
         <div className="feature4">
           <img
-            src="../src/assets/mountain.jpeg"
+            src="../src/assets/feature4.jpeg"
             alt="mountain"
             className="feature-image"
           />
-          <h3>Location Discovery</h3>
-          <p>
+          <h3 className="philosopher-bold d-flex justify-center-lg-start">
+            Location Discovery
+          </h3>
+          <p className="merriweather-sans">
             Utilize the provided latitude and longitude coordinates to offer
             users a comprehensive exploration of nearby attractions. Enable
             users to discover hidden gems, historical landmarks, and popular
