@@ -8,7 +8,7 @@ function Footer() {
         <img src={logo} alt="treavelo logo" />
       </div>
       
-      <p className="footer merriweather-sans">
+      <p className="footer pistachio-dark-bg merriweather-sans">
         &copy; 2024 Treavelo. All rights reserved.
       </p>
     </footer>
