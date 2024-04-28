@@ -33,6 +33,7 @@ const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
 function DisplayPlaces({ wizardData }) {
   const [poiData, setPoiData] = useState(null);
+  const [error, setError] = useState("");
   const apiKey = API_KEY;
   const apiSecret = API_SECRET;
   const accessToken = "mBNF9s0zgyaEmHhCxHf7q0Y3WZE0";
@@ -64,11 +65,12 @@ function DisplayPlaces({ wizardData }) {
 
         // setPlaceNames(names);
 
-        const query = names[0];
+        // const query = names[0];
         // const data = await fetchGooglePlaces(query, googleAPIKey);
         // setPlaceImageUrl(data.places[0].photos[0]);
       } catch (error) {
         console.error("There was a problem with your fetch operation:", error);
+        setError(`Error: ${error} `);
       }
     };
 
@@ -105,6 +107,7 @@ function DisplayPlaces({ wizardData }) {
         ) : (
           <div id="loading-bar-spinner" className="spinner">
             <div className="spinner-icon"></div>
+            <p id="error red merriweather-sans"></p>
           </div>
         )}
       </div>

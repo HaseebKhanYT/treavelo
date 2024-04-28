@@ -3,6 +3,10 @@
   background-color: white;
 }
 
+.red {
+  color: red;
+}
+
 .display-container{
   flex-wrap: wrap;
 }
