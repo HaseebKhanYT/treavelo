@@ -35,7 +35,7 @@ function DisplayPlaces({ wizardData }) {
   const [poiData, setPoiData] = useState(null);
   const apiKey = API_KEY;
   const apiSecret = API_SECRET;
-  const accessToken = "cwe1SfH4zCLzGJG1iye1Pq2ocJaY";
+  const accessToken = "mBNF9s0zgyaEmHhCxHf7q0Y3WZE0";
   const googleAPIKey = GOOGLE_API_KEY;
   const baseUrl = "https://test.api.amadeus.com";
   const latitude = wizardData.latitude; // SF latitude
@@ -52,7 +52,7 @@ function DisplayPlaces({ wizardData }) {
               latitude: latitude,
               longitude: longitude,
               radius: 2,
-              "page[limit]": 5,
+              categories:categories,
             },
             headers: {
               Authorization: `Bearer ${accessToken}`,
@@ -88,7 +88,7 @@ function DisplayPlaces({ wizardData }) {
                 className="mx-1 d-flex justify-between flex-column display-card box-shadow rounded py-1 px-2 my-1"
                 key={index}
               >
-                <h3 className="d-flex justify-center place-name">{poi.name}</h3>
+                <h3 className="d-flex justify-center mb-2 place-name">{poi.name}</h3>
                 <div className="d-flex tag-container justify-center flex-row">
                   {poi.tags.slice(0, 5).map((tag, tagIndex) => (
                     <div

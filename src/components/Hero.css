@@ -19,6 +19,7 @@
 
 .hero-image{
   position: relative;
+  object-fit: cover;
 }
 
 .image-container {

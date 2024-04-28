@@ -1,27 +1,19 @@
 /* Features.css */
 
 .main-card {
-  background-color: #f8f8f8; /* Light grey background */
-  padding: 30px; /* Increased padding */
-  margin: 20px;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   color: #fff;
-  display: flex;
-  flex-wrap: wrap;
 }
 
-.features-container {
-  display: flex;
-  justify-content: space-between; /* Align items to the ends */
+.main-feaure {
+  flex: 1;
 }
 
-.main_feaure {
-  flex: 1; /* Take up remaining space */
+.feature-paragraph {
+  width: 25rem;
 }
-
 
 .features-wrapper {
   display: flex;
@@ -35,8 +27,8 @@
 .feature2,
 .feature3,
 .feature4 {
-  background-color: #fff; /* White background */
-  padding: 30px; /* Increased padding */
+  background-color: #fff; 
+  padding: 30px; 
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
   flex: 1 1 350px; /* Increased width */
@@ -63,8 +55,15 @@
   margin-bottom: 20px; /* Add margin to bottom */
 }
 
+.image-container {
+
+}
+
 .main-feature-img {
-  width: 500px; /* Adjust image width */
-  height: 300px; /* Adjust image height */
-  margin: 20px;
+  width: 500px;
+  height: 500px;
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+
 }

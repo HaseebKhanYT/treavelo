@@ -9,32 +9,38 @@ import feature4 from "../assets/feature4.jpeg";
 function Features() {
   return (
     <main id="features" className="d-flex justify-center flex-column rounded">
-      <div className="main-card grey-bg d-flex flex-column rounded gutter">
-        <h2 className="my-1">City Gem Navigator</h2>
-        <div className="features-container">
-          <div className="main_feaure d-flex justify-center flex-column">
-            <p className="merriweather-sans mb-3">
-              Seamlessly explore the city's highlights with our curated list of
-              top attractions. Powered by the AVUXI TopPlace algorithm, discover
-              the most popular landmarks, parks, historical sites, nightlife
-              hotspots, restaurants, and shopping districts. Each attraction
-              comes with detailed information including name, category, tags,
-              and popularity score, ensuring you never miss out on the
-              must-visit spots.
-            </p>
+      <section className="main-card gutter grey-bg d-flex flex-column rounded gutter">
+        <h2 className="my-1 d-flex justify-center">City Gem Navigator</h2>
+        <div className="features-container d-flex flex-column flex-lg-row my-1 gutter justify-center justify-md-between">
+          <div className="main-feaure d-flex justify-center flex-column">
+            <div className="paragraph-container d-flex justify-center justify-lg-start">
+              <p className="feature-paragraph merriweather-sans text-center text-lg-left mb-3">
+                Seamlessly explore the city's highlights with our curated list
+                of top attractions. Powered by the AVUXI TopPlace algorithm,
+                discover the most popular landmarks, parks, historical sites,
+                nightlife hotspots, restaurants, and shopping districts. Each
+                attraction comes with detailed information including name,
+                category, tags, and popularity score, ensuring you never miss
+                out on the must-visit spots.
+              </p>
+            </div>
             <div className="button-container d-flex justify-center justify-lg-start my-1">
               <Button />
             </div>
           </div>
-          <img
-            src={mainfeature}
-            alt="mountain"
-            className="main-feature-img rounded center"
-          />
+          <div className="d-flex image-container justify-center justify-lg-end">
+            <figure>
+              <img
+                src={mainfeature}
+                alt="A picture of a castle on a mountain surrounded by clouds"
+                className="main-feature-img rounded"
+              />
+            </figure>
+          </div>
         </div>
-      </div>
-      <div className="features-wrapper">
-        <div className="feature1 justify-between">
+      </section>
+      <section className="features-wrapper">
+        <article className="feature1 justify-between">
           <img src={feature1} alt="mountain" className="feature-image" />
           <h3 className="philosopher-bold d-flex justify-center-lg-start">
             Authentic recommendations
@@ -44,8 +50,8 @@ function Features() {
             Gain insider insights and off-the-beaten-path suggestions from those
             who know their destinations best.
           </p>
-        </div>
-        <div className="feature2 justify-between">
+        </article>
+        <article className="feature2 justify-between">
           <img src={feature2} alt="mountain" className="feature-image" />
           <h3 className="philosopher-bold d-flex justify-center-lg-start">
             Top Attractions Discovery
@@ -56,8 +62,8 @@ function Features() {
             categorized types, including sights, beaches/parks, historical
             landmarks, nightlife spots, restaurants, or shopping destinations.
           </p>
-        </div>
-        <div className="feature3 justify-between">
+        </article>
+        <article className="feature3 justify-between">
           <img src={feature3} alt="mountain" className="feature-image" />
           <h3 className="philosopher-bold d-flex justify-center-lg-start">
             Category-Based Recommendations
@@ -69,8 +75,8 @@ function Features() {
             attractions based on your interests, ensuring a personalized travel
             experience.
           </p>
-        </div>
-        <div className="feature4 justify-between">
+        </article>
+        <article className="feature4 justify-between">
           <img src={feature4} alt="mountain" className="feature-image" />
           <h3 className="philosopher-bold d-flex justify-center-lg-start">
             Location Discovery
@@ -81,8 +87,8 @@ function Features() {
             users to discover hidden gems, historical landmarks, and popular
             sites based on their current location or specified coordinates.
           </p>
-        </div>
-      </div>
+        </article>
+      </section>
     </main>
   );
 }

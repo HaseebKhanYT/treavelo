@@ -7,35 +7,40 @@ nav {
 ul {
   list-style: none;
   background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: row;
   border-radius: 25px;
   margin: 0;
   padding: 0;
 }
 
+li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  @media (min-width: 576px) {
+    margin: 0;
+    
+  }
+}
+
 .nav-buttons {
   border-radius: 25px;
-  padding: 1rem 1.5rem ;
-
+  padding: 1rem 1.5rem;
 }
 
 .nav-buttons.active {
-  background-color: #85C270;
+  background-color: #85c270;
 }
 
 .nav-buttons:hover {
-  background-color: #85C270;
+  background-color: #85c270;
 }
 
 .nav-buttons > a {
   text-decoration: none;
-  color: #0D0A0B;
+  color: #0d0a0b;
   text-wrap: nowrap;
 }
 
 a:visited {
-  color: #0D0A0B;
+  color: #0d0a0b;
 }

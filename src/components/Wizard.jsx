@@ -56,7 +56,7 @@ export default function Wizard({ displayPlaces, setDisplayPlaces, wizardData, se
           <button
           className="button mx-2"
             onClick={() => {
-              if (step == wizardTitles.length - 1) {
+              if (step == wizardTitles.length - 1 && wizardData.categories != "") {
                 setDisplayPlaces(true);
               } else {
                 setStep((currStep) => currStep + 1);

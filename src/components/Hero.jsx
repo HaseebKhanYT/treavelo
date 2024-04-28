@@ -4,8 +4,8 @@ import hero from "../assets/hero.jpeg";
 
 function Hero() {
   return (
-    <header className="center white-bg gutter rounded">
-      <section className="d-flex hero-container flex-column flex-lg-row my-1 w-100 h-100 gutter">
+    <header className="d-flex justify-center white-bg gutter rounded">
+      <section className="d-flex hero-container justify-between flex-column flex-lg-row my-1 w-100 h-100 gutter">
         <div className="d-flex hero-text-container justify-center flex-column mr-1">
           <h1 className="philosopher-bold d-flex justify-center justify-lg-start header-text">
             Hi, we are <br /> Treavelo!
@@ -23,7 +23,7 @@ function Hero() {
             <Button />
           </div>
         </div>
-        <aside className="d-flex image-container justify-center justify-lg-end w-100">
+        <aside className="d-flex image-container justify-center justify-lg-end">
           <figure className="hero-image">
             <img
               src={hero}
