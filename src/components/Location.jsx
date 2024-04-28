@@ -16,7 +16,6 @@ function Location({ wizardData, setWizardData, step, setStep }) {
   const [currentCity, setCurrentCity] = useState(null);
   const [currentLatitude, setCurrentLatitude] = useState(null);
   const [currentLongitude, setCurrentLongitude] = useState(null);
-  const [inAllowedRegion, setInAllowedRegion] = useState(false);
   const [showLocationError, setShowLocationError] = useState(false);
   const [locationSuccess, setLocationSuccess] = useState(false);
 
