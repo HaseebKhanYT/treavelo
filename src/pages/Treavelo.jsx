@@ -11,6 +11,16 @@ export default function Treavelo() {
     radius: 1,
     categories: "",
   });
+  const cities = [
+    "SF",
+    "Dallas",
+    "NYC",
+    "Barca",
+    "Bangalore",
+    "Berlin",
+    "Paris",
+    "London",
+  ];
 
   return (
     <>

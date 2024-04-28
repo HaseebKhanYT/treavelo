@@ -4,7 +4,7 @@ import "./Button.css"
 export default function Button() {
   return (
     <>
-      <Link to="/explore" className="button merriweather-sans">Try Treavelo!</Link>
+      <Link to="/explore" className="button try-button merriweather-sans">Try Treavelo!</Link>
     </>
   );
 }

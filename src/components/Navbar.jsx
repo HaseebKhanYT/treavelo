@@ -11,13 +11,13 @@ function Navbar() {
   <div className="center flex-column my-1">
 
     <img className="my-1" src={logo} alt="treavelo logo" />
-    <nav>
-      <ul className="merriweather-sans night">
+    <nav className="gutter">
+      <ul className="merriweather-sans night d-flex justify-center flex-column flex-sm-row align-center">
         <li className="nav-buttons">
           <Link to="/">Home</Link>
         </li>
         <li className="nav-buttons">
-          <a href="#features">Features</a>
+          <a href="#features" >Features</a>
         </li>
         <li className="nav-buttons">
           <a href="#faq">FAQs</a>

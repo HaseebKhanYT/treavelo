@@ -4,6 +4,7 @@
   padding: 1rem 2rem;
   border-radius: 25px;
   text-decoration: none;
+  text-wrap: nowrap;
 }
 
 .button:visited {
