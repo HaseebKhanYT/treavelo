@@ -12,7 +12,6 @@ export default function Wizard({ displayPlaces, setDisplayPlaces, wizardData, se
   ];
 
   useEffect(() => {
-    console.log(wizardData);
   }, [wizardData]);
   const DisplayForm = () => {
     if (step == 0) {

@@ -20,12 +20,10 @@ function Location({ wizardData, setWizardData, step, setStep }) {
   const [locationSuccess, setLocationSuccess] = useState(false);
 
   useEffect(() => {
-    console.log(currentCity);
   }, [currentCity]);
 
   useEffect(() => {
     if (currentLatitude !== null && currentLongitude !== null) {
-      console.log(currentLatitude, currentLongitude);
       setWizardData({
         ...wizardData,
         latitude: currentLatitude,
@@ -101,7 +99,6 @@ function Location({ wizardData, setWizardData, step, setStep }) {
         (Math.random() * (-0.061048 - -0.169882) + -0.169882).toFixed(6)
       );
     }
-    console.log(currentLatitude,currentLongitude);
   }
   const [isOpen, setOpen] = useState(false);
   const [items, setItem] = useState(displayCities);
@@ -112,7 +109,6 @@ function Location({ wizardData, setWizardData, step, setStep }) {
   const handleItemClick = (id) => {
     selectedItem == id ? setSelectedItem(null) : setSelectedItem(id);
     toggleDropdown();
-    console.log(id);
     generateLocation(id);
   };
 
