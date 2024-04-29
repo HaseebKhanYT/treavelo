@@ -37,7 +37,6 @@ function DisplayPlaces({ wizardData }) {
   const apiKey = API_KEY;
   const apiSecret = API_SECRET;
   const accessToken = "aR6bX8g6xmp1oRg3gCMxo1v1GthL";
-  const googleAPIKey = GOOGLE_API_KEY;
   const baseUrl = "https://test.api.amadeus.com";
   const latitude = wizardData.latitude; // SF latitude
   const longitude = wizardData.longitude; // SF Longitude
